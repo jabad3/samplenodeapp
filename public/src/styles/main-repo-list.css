@@ -1,0 +1,178 @@
+#main-repo-list .form-control {
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+}
+#main-repo-list .content-container {
+  background-color: #fff;
+  padding: 35px 20px;
+  height: 75vh;
+  overflow: auto;
+  width: 65vw;
+  margin: auto;
+}
+
+#main-repo-list .form-control {
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+}
+#main-repo-list .content-container {
+  background-color: #fff;
+  padding: 35px 20px;
+  height: 75vh;
+  overflow: auto;
+  width: 65vw;
+  margin: auto;
+}
+#main-repo-list input[type="text"].form-control,
+#main-repo-list input[type="search"].form-control {
+/*
+  border: none;
+  border-bottom: 1px dotted #CFCFCF;
+*/
+/*
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+*/
+}
+#main-repo-list ul.main-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 0px;
+}
+#main-repo-list ul.main-list li a {
+  display: block;
+  border-bottom: 1px dotted #CFCFCF;
+  padding: 20px;
+  text-decoration: none;
+}
+#main-repo-list ul.main-list li:last-child a {
+  /*    border-bottom:none;*/
+}
+#main-repo-list ul.main-list li span {
+  display: block;
+}
+#main-repo-list ul.main-list li span.main-header {
+  font-weight: 600;
+  color: #8F8F8F;
+}
+#main-repo-list ul.main-list li span.main-subheader {
+  color: #8C8C8C;
+}
+#main-repo-list ul.main-list li span.main-message-preview {
+  display: block;
+  color: #A8A8A8;
+}
+#main-repo-list .main-search {
+  border-bottom-color: #7FBCC9 !important;
+  padding-left: 35px;
+}
+
+#main-repo-list .list-group {
+  overflow: hidden;
+}
+#main-repo-list .list-group-item:first-child, #main-repo-list .list-group-item:last-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  overflow: hidden;
+}
+#main-repo-list .list-group-item {
+  border-left: 0px solid #dddddd;
+  border-right: 0px solid #dddddd;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#main-repo-list .list-group-item > .show-menu {
+  position: absolute;
+  height: 100%;
+  width: 24px;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(51, 51, 51, 0.2);
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#main-repo-list .list-group-item > .show-menu > span {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  padding: 0px 5px;
+}
+#main-repo-list .list-group-submenu {
+  position: absolute;
+  top: 0px;
+  right: -88px;
+  white-space: nowrap;
+  list-style: none;
+  padding-left: 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#main-repo-list .list-group-submenu .list-group-submenu-item {
+  float: right;
+  white-space: nowrap;
+  display: flex;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #333333;
+  color: #ebebeb;
+}
+#main-repo-list .list-group-submenu-item .glyphicon {
+  margin: auto;
+}
+#main-repo-list .list-group-item.open {
+  margin-left: -88px;
+}
+#main-repo-list .list-group-item.open > .show-menu {
+  right: 88px;
+}
+#main-repo-list .list-group-item.open .list-group-submenu {
+  right: 0px;
+}
+#main-repo-list .list-group-submenu .list-group-submenu-item.primary {
+  color: white;
+  background-color: #3276b1;
+}
+#main-repo-list .list-group-submenu .list-group-submenu-item.success {
+  color: white;
+  background-color: #5cb85c;
+}
+#main-repo-list .list-group-submenu .list-group-submenu-item.info {
+  color: white;
+  background-color: #39b3d7;
+}
+#main-repo-list .list-group-submenu .list-group-submenu-item.warning {
+  color: white;
+  background-color: #f0ad4e;
+}
+#main-repo-list .list-group-submenu .list-group-submenu-item.danger {
+  color: white;
+  background-color: #d9534f;
+}
+#main-repo-list .list-group-item {
+  padding: 0px 15px !important;
+  border: none !important;
+}
+#main-repo-list .height-control {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 85%;
+}
+#main-repo-list .list-group-submenu-item {
+  height: 100px;
+}

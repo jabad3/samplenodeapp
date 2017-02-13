@@ -1,0 +1,17 @@
+curl -i https://api.github.com/repos/nodejs/node
+curl -i https://api.github.com/repos/nodejs/node/commits
+
+"repo_id": 2126244
+"full_name": "twbs/bootstrap",
+"description": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.",
+"more": "https://github.com/twbs/bootstrap",
+
+Login Template:
+http://bootsnipp.com/snippets/featured/login-amp-signup-forms-in-panel
+
+todo
+crypto - check
+"more" key
+proof api
+validation for to adding repo - check
+testing - check

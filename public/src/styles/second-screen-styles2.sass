@@ -1,0 +1,37 @@
+#second-screen {
+  position: absolute;
+  margin-top: 51px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  .parent {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    .side {
+      flex: 0;
+      .side-bar-list {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        overflow: auto;
+        .list-group-item {
+          width:30vw;
+        }
+        .list-group-item:first-child {
+          border-top: 0px;
+          border-radius: 0px!important;
+        }
+        .list-group-item:hover { 
+          background-color: #F8F8FF;
+          cursor: pointer
+        }
+      }
+    }
+    .main {
+        flex: 1;
+        padding: 20px;
+    }
+  }
+}
