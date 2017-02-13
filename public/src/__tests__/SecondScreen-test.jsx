@@ -45,7 +45,7 @@ describe('CommitListScreen', function () {
             var textColor = $(item).css("color");
             var finalChar = commitId.slice(-1);
             var isInt = parseInt(finalChar).toString();
-            var colorlogic = (isInt==="NaN")?"black":"blue";  
+            var colorlogic = (isInt==="NaN")?"black":"blue";
             expect(textColor).toEqual(colorlogic);
         })
     });
