@@ -83,7 +83,7 @@ module.exports = function(app) {
                 {safe: true, upsert: true, new : true},
                 function(err, model) {
                     if(err) { res.status(500); res.json({message:"internal error"}); }
-                    else { res.status(200); res.send(); }   
+                    else { res.status(200); res.send({message:'ok'}); }   
                 }
             );
     });
