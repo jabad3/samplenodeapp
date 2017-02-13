@@ -29,7 +29,7 @@ module.exports = {
                         if(response.status>=400 && response.status<600) { 
                             return {status:response.status, fetchHasFailed:true, statusText:response.statusText}; 
                         }
-                        else { return response.json(); }
+                        else { return response; }
                     },
                     function(error) { console.log("Error", error) }
                 );
