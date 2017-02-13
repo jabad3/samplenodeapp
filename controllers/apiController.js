@@ -3,15 +3,18 @@ var Repos = require("../models/SavedRepoModel");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var crypto = require("crypto");
+var express = require("express");
 
-mongoose.Promise = global.Promise;
-//assert.equal(query.exec().constructor, global.Promise);
+//mongoose.Promise = global.Promise;
 
 module.exports = function(app) {
+    var router = express.Router();
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
+    app.use('/api', router);
     
-    app.post("/api/auth", function(req, res){
+    router.route('/auth')
+    .post(function(req, res){
         if(!req.body.email || !req.body.password) { return res.status(400).json({error:"malformed body"}); }
         
         var email = req.body.email;
@@ -30,7 +33,9 @@ module.exports = function(app) {
             }
         });
     });
-    app.post("/api/users", function(req, res){
+    
+    router.route('/users')
+    .post(function(req, res){
         if(!req.body.email || !req.body.password) { return res.status(400).json({error:"malformed body"}); }
 
         var email = req.body.email;
@@ -55,14 +60,14 @@ module.exports = function(app) {
     });
 
     
-    
-    app.get("/api/repos/:uid", function(req, res){
+    router.route('/repos/:uid')
+    .get(function(req, res){
         Repos.findOne({user:req.params.uid}, function(err, result){
             if(err) { res.status(500); res.json({message:'internal error'}); return; }
             res.status(200); res.json(result.saved);
         });
-    });
-    app.post("/api/repos/:uid", function(req, res){
+    })
+    .post(function(req, res){
         if(!req.body.repo_id || !req.body.full_name || !req.body.description || !req.body.more) { 
             return res.status(400).json({error:"malformed body"}); 
         }
@@ -82,7 +87,9 @@ module.exports = function(app) {
                 }
             );
     });
-    app.delete("/api/repos/:uid/:rid", function(req, res){
+    
+    router.route('/repos/:uid/:rid')
+    .delete(function(req, res){
         Repos.findOneAndUpdate(
                 {user:  req.params.uid },
                 {$pull: {saved: {repo_id: req.params.rid }
