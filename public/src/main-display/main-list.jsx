@@ -58,8 +58,8 @@ module.exports = React.createClass({
         Actions.saveRepo(this.state.searchEntry, this.props.userprofile.id);
     },
     generateListElements: function() {
-        var elms = this.state.savedRepoList.map(function(repo){
-            return <ListItem {...repo} onListItemDeleted={this.onListItemDeleted}></ListItem>
+        var elms = this.state.savedRepoList.map(function(repo, index){
+            return <ListItem {...repo} key={index} onListItemDeleted={this.onListItemDeleted}></ListItem>
         }.bind(this));
         sliders.activate();
         return elms;

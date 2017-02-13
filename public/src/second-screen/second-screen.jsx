@@ -43,11 +43,11 @@ module.exports = React.createClass({
         </div>
     },
     generateListElements: function() {
-        return this.state.recentCommits.map(function(commit){
+        return this.state.recentCommits.map(function(commit, index){
             var finalChar = commit.sha.slice(-1);
             var isInt = parseInt(finalChar).toString();
             var colorLogic = (isInt==="NaN")?"black":"blue";
-            return <li className="list-group-item" style={{color:colorLogic}} onClick={()=>this.commitClicked(commit)}>{commit.sha}</li>
+            return <li className="list-group-item" style={{color:colorLogic}} onClick={()=>this.commitClicked(commit)} key={index}>{commit.sha}</li>
         }.bind(this));
     },
     commitClicked: function(commit_object) {
