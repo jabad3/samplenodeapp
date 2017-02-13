@@ -9,7 +9,7 @@ var Api = require("../utils/api")
 module.exports = React.createClass({
     mixins: [Reflux.listenTo(UserInfoStore, 'onEventEmitted')],
     getInitialState: function() {
-        return {email:"newnew@test.com", password:"11", error:""}  
+        return {email:"", password:"", error:""}  
     },
     render: function(){
         return <div>

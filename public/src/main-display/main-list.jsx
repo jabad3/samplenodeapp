@@ -10,7 +10,7 @@ module.exports = React.createClass({
     getInitialState: function() {
         return {
             savedRepoList:[],
-            searchEntry:"twbs/bootstrap"
+            searchEntry:"nodejs/node"
         }
     },
     componentWillMount: function() {
