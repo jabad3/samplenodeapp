@@ -6,10 +6,13 @@ var apiController = require("./controllers/apiController");
 var app = express();
 var port = process.env.PORT || 8001;
 
+mongoose.Promise = global.Promise;
 mongoose.connect(config.getDbConnectionString());
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() { console.log("mongoose connected"); });
+
+/* Mongoose Connection Settings */
+//var db = mongoose.connection;
+//db.once('open', function() { console.log("mongoose connected"); });
+//db.on('error', console.error.bind(console, 'connection error:'));
 
 app.use("/assets", express.static(__dirname + "/public"));
 app.get('/', function(req, res){
